@@ -5,3 +5,7 @@ requests
 pandas
 xlsxwriter
 flask-login
+ibm_db
+# ibm_db_dbi
+
+python-dotenv

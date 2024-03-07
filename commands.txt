@@ -1,0 +1,9 @@
+python -m pip install ibm_db==2.0.8a
+
+pip install ibm-db
+
+python -m pip install ibm_db
+
+
+
+https://github.com/IBM/db2-samples/tree/master/python_samples/Python_Examples/ibm_db_dbi
