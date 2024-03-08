@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-podman logs wx-wa-python1
+podman logs wx-wa-python2
 

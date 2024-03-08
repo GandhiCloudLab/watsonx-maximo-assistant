@@ -1,7 +1,0 @@
-https://converter.swagger.io/#/Converter/convertByUrl
-
-
-https://medium.com/@yi.angela/connecting-watson-assistant-to-db2-with-ibm-cloud-function-and-a-custom-extension-89bbe4c6a83b
-
-
-      "url": "https://app-02-image.1ea3xcnm2svv.us-east.codeengine.appdomain.cloud/"

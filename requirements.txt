@@ -17,3 +17,5 @@ python-dotenv
 # Werkzeug==0.16.1 
 
 flask-restx
+
+ibm_cloud_sdk_core
