@@ -1,6 +1,10 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
+from flask_apispec import FlaskApiSpec
+from apispec import APISpec
+
+
 import os
 import argparse
 import logging 
@@ -14,6 +18,15 @@ import os, json
 
 app = Flask(__name__, static_folder='./static', static_url_path='/')
 CORS(app)
+app.config.update({
+    'APISPEC_SPEC': APISpec(
+        title='Your API Title',
+        version='v1',
+        plugins=['apispec.ext.marshmallow'],
+    ),
+    'APISPEC_SWAGGER_URL': '/swagger/',  # URI to access API Doc JSON
+})
+
 
 # Sample data
 books = [

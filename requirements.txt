@@ -9,3 +9,11 @@ ibm_db
 # ibm_db_dbi
 
 python-dotenv
+
+# flask-apispec 
+# apispec
+
+# flask-restplus
+# Werkzeug==0.16.1 
+
+flask-restx
