@@ -80,6 +80,14 @@ def get_order(params):
 
     return response
 
+
+# API endpoint to get all books
+@app.route('/books', methods=['GET'])
+def get_books():
+    return jsonify(books)
+
+
+
 def main():
   logging.info("main started .....")
 
