@@ -37,11 +37,27 @@ def home():
     return app.send_static_file('index.html')
 
 ns = api.namespace('maximo', description='Maximo API')
+
+# Define a data model
+query_maximo_model = api.model('Task', {
+    'query': fields.String(required=True, description='The query to be asked with Maximo')
+})
+
 @ns.route('/')
 class MaximoWorld(Resource):
     def get(self):
         maximoHandler = MaximoHandler()
-        return maximoHandler.executeMain()
+        return maximoHandler.executeGetMain()
+
+    @ns.doc('query_maximo')
+    @ns.expect(query_maximo_model)
+    def post(self):
+        maximoHandler = MaximoHandler()
+        response = maximoHandler.executePostMain(api.payload)
+        print("------------------------------------------------ Sql Output ------------------------------------------------")
+        print(response)
+        print("---------------------------------------------------------------------------------------------------------------")
+        return response
 
 
 ns = api.namespace('hello', description='Hello API')

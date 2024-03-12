@@ -141,8 +141,19 @@ class MaximoHandler(object):
         print("---------------------------------------------------------------------------------------------------------------")
 
         return prompt_output
+    
 
-    def executeMain(self):
+    def executeGetMain(self):
+        query = """
+            What is the worktype of workorder 1309?
+            """
+        return self.executeMain(query)
+
+    def executePostMain(self, payload):
+        query = payload['query']
+        return self.executeMain(query)
+
+    def executeMain(self, query):
 
         objectname="WORKORDER"
         context = self.getSchema(objectname)
@@ -158,10 +169,6 @@ class MaximoHandler(object):
             """ + context + """
 
             #####
-            """
-
-        query = """
-            What is the worktype of workorder 1309?
             """
 
         prompt_input = MaximoHandler.instruction + context + MaximoHandler.example + query
