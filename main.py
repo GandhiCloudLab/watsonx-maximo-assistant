@@ -38,19 +38,23 @@ def home():
 
 ns = api.namespace('maximo', description='Maximo API')
 
-# Define a data model
-query_maximo_model = api.model('Task', {
+# Define the model for the request payload
+input_data_model = api.model('InputData', {
     'query': fields.String(required=True, description='The query to be asked with Maximo')
 })
-
+# Define the model for the response payload
+output_data_model = api.model('OutputData', {
+    'result': fields.List(fields.Raw(description='Description for raw field'))
+})
 @ns.route('/')
 class MaximoWorld(Resource):
     def get(self):
         maximoHandler = MaximoHandler()
         return maximoHandler.executeGetMain()
 
-    @ns.doc('query_maximo')
-    @ns.expect(query_maximo_model)
+    @ns.doc(description='Post method example', responses={200: 'Successful operation', 400: 'Invalid input'})
+    @ns.expect(input_data_model)
+    @ns.marshal_with(output_data_model)
     def post(self):
         maximoHandler = MaximoHandler()
         response = maximoHandler.executePostMain(api.payload)
