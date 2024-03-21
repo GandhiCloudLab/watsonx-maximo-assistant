@@ -203,3 +203,4 @@ The application page get displayed.
 
 1. In the application screen, Click on the `Open URL` link to open the application. 
 
+<img src="images/image23.png">
