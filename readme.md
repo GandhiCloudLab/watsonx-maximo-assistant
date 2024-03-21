@@ -198,9 +198,10 @@ The application page get displayed.
 
 10. Click on `Deploy` Option to redeploy the app with the created environment variables.
 
+<img src="images/image23.png">
 
 #### 3.4. Open the Application
 
 1. In the application screen, Click on the `Open URL` link to open the application. 
 
-<img src="images/image23.png">
+<img src="images/image24.png">
