@@ -233,6 +233,8 @@ Lets create open API using swagger. This open api json is needed to create exten
 
 2. In the `GET / Convertor` method, click on the `Try it out` button
 
+<img src="images/image49.png">
+
 3. In the `URL` text box enter the App url suffixed with `swagger.json`
 
     Ex:     https://maxxxxxxxx.appdomain.cloud/swagger.json
