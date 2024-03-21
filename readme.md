@@ -263,7 +263,7 @@ Lets create Custom Extension in Watson Assistant to call the app.
 <details><summary>CLICK ME</summary>
 
 
-1. In Watson Assistant, Click on `Extension` button
+1. In Watson Assistant, Click on `Integration` button
 
 <img src="images/image53.png">
 
@@ -320,5 +320,124 @@ Once the Custom Extension is created, it has to be added to WA.
 
 Extension got added.
 <img src="images/image65.png">
+
+Now this extension can be used in WA.
+
+</details>
+
+## 7. Create Action in Watson Assistant
+
+Lets create action in WA to use this extension.
+
+<details><summary>CLICK ME</summary>
+
+### 7.1 Create Action 
+
+1. Click on `Actions` menu in WA
+<img src="images/image70.png">
+
+2. Click on `New action` button
+<img src="images/image71.png">
+
+3. Click on `Start from scratch` tile
+<img src="images/image72.png">
+
+4. Enter name for the action.
+5. Click on `Save` button
+<img src="images/image73.png">
+
+6. Click on `customer starts with` Tile
+<img src="images/image74.png">
+
+7. Edit the default start phrase to any. Ex: `Hi`
+
+8. Click on `Save` button
+<img src="images/image75.png">
+
+<img src="images/image76.png">
+
+### 7.2 Create 1st Step 
+
+1. Click on Step 1 title
+<img src="images/image77.png">
+
+2. Enter the text like `Welcome to Maximo Assistant`
+
+3. Click on `Save` icon
+
+4. Click on `New Step` button to create new step.
+<img src="images/image78.png">
+
+### 7.3 Create 2nd Step 
+
+1. Enter the text like `Enter your Query :`
+
+2. Click on `Define customer response` link
+
+3. Click on `T Free Text` Option
+<img src="images/image79.png">
+
+4. Click on `T Free Text` Option
+<img src="images/image80.png">
+
+### 7.4 Create 3rd Step with extension
+
+1. Click on `New Step` button on the above screen
+
+2. Enter the text like `Processing your Query .....`
+
+3. Click on `Continue to next step` link
+
+4. Click on `Use an extension` Option
+<img src="images/image81.png">
+
+5. Choose `Maximo-Db-Interface` for `Extension`
+6. Choose `Post method example` for `Operation`
+7. Choose `Tr query` for `Parameters`
+8. In `To` field choose `Action step variables`
+<img src="images/image82.png">
+
+9. Choose `2. Enter your query:` for `To` field
+<img src="images/image83.png">
+
+10. It will look like the below.
+11. Click on `Apply` button
+<img src="images/image84.png">
+
+12. It will look like the below.
+<img src="images/image84.png">
+<img src="images/image85.png">
+
+
+### 7.5 Create 4th Step to show results
+
+1. Click on `New Step` button on the above screen
+
+2. Enter the text like `Here is the response for your Query. .....`
+3. Click on `Fx` icon
+4. Click on `Maximo-Db-interface (step 3)` Option
+<img src="images/image86.png">
+
+5. Choose `body.result`. The python app returns json with the key `result` and WA picked up using the Open API we upload in the extension creation section above.
+<img src="images/image87.png">
+
+6. It will look like the below.
+<img src="images/image88.png">
+
+### 7.6 Preview the WA
+
+1. Click on `Preview` button on the above screen
+
+2. Enter the text  `Hi` (Remember that the `customer starts with` the step where we entered 'Hi'.)
+<img src="images/image89.png">
+
+3. It shows 3 options. Choose the action `Gan Maximo Assistant` that we created 
+<img src="images/image90.png">
+
+4. Enter your query `What is the worktype of workorder 1309?`
+<img src="images/image91.png">
+
+5. See the response from the app.
+<img src="images/image92.png">
 
 </details>
