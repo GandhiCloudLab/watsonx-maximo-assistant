@@ -8,6 +8,7 @@ In this documentation lets explore about the following.
 - Creating Open API using Swagger
 - Create Custom Extension in Watson Assistant
 - Add Custom Extension to Watson Assistant
+- Create Action in Watson Assistant to call the custom extension
 
 ## 1. Run Locally
 
@@ -387,7 +388,7 @@ Lets create action in WA to use this extension.
 3. Click on `T Free Text` Option
 <img src="images/image79.png">
 
-4. Click on `T Free Text` Option
+4. It looks like this.
 <img src="images/image80.png">
 </details>
 
@@ -411,7 +412,7 @@ Lets create action in WA to use this extension.
 8. In `To` field choose `Action step variables`
 <img src="images/image82.png">
 
-9. Choose `2. Enter your query:` for `To` field
+9. Choose `2. Enter your query:` for `To` field (This is from the 2nd step)
 <img src="images/image83.png">
 
 10. It will look like the below.
@@ -419,7 +420,6 @@ Lets create action in WA to use this extension.
 <img src="images/image84.png">
 
 12. It will look like the below.
-<img src="images/image84.png">
 <img src="images/image85.png">
 
 </details>
@@ -435,7 +435,10 @@ Lets create action in WA to use this extension.
 4. Click on `Maximo-Db-interface (step 3)` Option
 <img src="images/image86.png">
 
-5. Choose `body.result`. The python app returns json with the key `result` and WA picked up using the Open API we upload in the extension creation section above.
+5. Choose `body.result`. 
+
+The Python app returns JSON with a key called `result`, which WA retrieved from the Open API uploaded in the extension creation section above
+
 <img src="images/image87.png">
 
 6. It will look like the below.
