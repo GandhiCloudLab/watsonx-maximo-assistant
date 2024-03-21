@@ -333,6 +333,8 @@ Lets create action in WA to use this extension.
 
 ### 7.1 Create Action 
 
+<details><summary>CLICK ME</summary>
+
 1. Click on `Actions` menu in WA
 <img src="images/image70.png">
 
@@ -355,8 +357,12 @@ Lets create action in WA to use this extension.
 <img src="images/image75.png">
 
 <img src="images/image76.png">
+</details>
 
 ### 7.2 Create 1st Step 
+
+<details><summary>CLICK ME</summary>
+
 
 1. Click on Step 1 title
 <img src="images/image77.png">
@@ -367,8 +373,12 @@ Lets create action in WA to use this extension.
 
 4. Click on `New Step` button to create new step.
 <img src="images/image78.png">
+</details>
 
 ### 7.3 Create 2nd Step 
+
+<details><summary>CLICK ME</summary>
+
 
 1. Enter the text like `Enter your Query :`
 
@@ -379,8 +389,12 @@ Lets create action in WA to use this extension.
 
 4. Click on `T Free Text` Option
 <img src="images/image80.png">
+</details>
 
 ### 7.4 Create 3rd Step with extension
+
+<details><summary>CLICK ME</summary>
+
 
 1. Click on `New Step` button on the above screen
 
@@ -408,8 +422,11 @@ Lets create action in WA to use this extension.
 <img src="images/image84.png">
 <img src="images/image85.png">
 
+</details>
 
 ### 7.5 Create 4th Step to show results
+<details><summary>CLICK ME</summary>
+
 
 1. Click on `New Step` button on the above screen
 
@@ -423,8 +440,11 @@ Lets create action in WA to use this extension.
 
 6. It will look like the below.
 <img src="images/image88.png">
+</details>
 
 ### 7.6 Preview the WA
+
+<details><summary>CLICK ME</summary>
 
 1. Click on `Preview` button on the above screen
 
@@ -439,5 +459,6 @@ Lets create action in WA to use this extension.
 
 5. See the response from the app.
 <img src="images/image92.png">
+</details>
 
 </details>
