@@ -2,6 +2,6 @@
 
 echo "push Started ...."
 
-podman push docker.io/gandigit/wx-wa-python2:latest
+podman push docker.io/gandigit/maixmo-db-interface:latest
 
 echo "push completed ...."

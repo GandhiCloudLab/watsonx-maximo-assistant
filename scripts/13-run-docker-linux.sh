@@ -2,6 +2,6 @@
 
 cd ..
 
-podman run --env-file .env -d -p 8080:8080 --name wx-wa-python1 docker.io/gandigit/wx-wa-python2
+podman run --env-file .env -d -p 8080:8080 --name maixmo-db-interface docker.io/gandigit/maixmo-db-interface
 
-podman logs wx-wa-python1
+podman logs maixmo-db-interface

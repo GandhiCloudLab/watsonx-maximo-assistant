@@ -6,4 +6,4 @@ python -m pip install ibm_db
 
 python -m pip install ibm_cloud_sdk_core
 
-https://github.com/IBM/db2-samples/tree/master/python_samples/Python_Examples/ibm_db_dbi
+python main.py

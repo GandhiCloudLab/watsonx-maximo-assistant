@@ -25,12 +25,6 @@ api = Api(app, version='1.0', title='Sample API', description='A simple sample A
           openapi_version='3.0.2'  # Specify the OpenAPI version here
 )
 
-# Sample data
-books = [
-    {"id": 1, "title": "Book 1", "author": "Author 1"},
-    {"id": 2, "title": "Book 2", "author": "Author 2"}
-]
-
 # Define a simple homepage route
 @app.route('/')
 def home():
@@ -69,10 +63,13 @@ ns = api.namespace('hello', description='Hello API')
 class HelloWorld(Resource):
     def get(self):
         return {'hello': 'world'}
-    
-    def getAll(self):
-        return {'hello1': 'world1'}
-    
+
+# Sample data
+books = [
+    {"id": 1, "title": "Book 1", "author": "Author 1"},
+    {"id": 2, "title": "Book 2", "author": "Author 2"}
+]
+
 ns = api.namespace('books', description='Books operations')
 @ns.route('/')
 class Books(Resource):
@@ -80,26 +77,10 @@ class Books(Resource):
     def get(self):
         return jsonify(books)
 
-    # API endpoint to get a specific book by its ID
-    def get_book(self, id):
-        book = next((book for book in books if book['id'] == id), None)
-        if book:
-            return jsonify(book)
-        return jsonify({"message": "Book not found"}), 404
 
-@ns.route('/<int:id>')
-@ns.param('id', 'The books identifier')
-class Books2(Resource):
-    @ns.doc('get_book')
-    def get(self, id):
-        book = next((book for book in books if book['id'] == id), None)
-        if book:
-            return jsonify(book)
-        return jsonify({"message": "Book not found"}), 404
-
-    
 def main():
   logging.info("main started .....")
+
 
 if __name__ == '__main__':
   main()
