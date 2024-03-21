@@ -10,6 +10,8 @@ In this documentation lets explore about the following.
 
 To run the application locally follow the below steps. 
 
+<details><summary>CLICK ME</summary>
+
 ### 1.1 Download the repo
 
 1. Download this repo 
@@ -76,7 +78,7 @@ It would give the output like the below.
   ]
 }
 ```
-
+</details>
 
 ## 2. Create Docker Image
 
@@ -85,6 +87,8 @@ You can create docker images using podman and run the app in the code engine.
 Here docker.io is used as a image repository. You can use as per your wish.
 
 In the below example we used `gandigit` as a docker id. You have to change it to your docker id.
+
+<details><summary>CLICK ME</summary>
 
 #### 2.1 Docker login
 
@@ -110,10 +114,14 @@ podman build --platform linux/amd64 -f Dockerfile -t docker.io/gandigit/maixmo-d
 podman push docker.io/gandigit/maixmo-db-interface:latest
 ```
 
+</details>
+
 ## 3. Deploying the Docker Image in Code Engine
 
 Lets deploy the created docker image in the Code Engine.
 
+
+<details><summary>CLICK ME</summary>
 
 #### 3.1 Create Project
 
@@ -205,3 +213,5 @@ The application page get displayed.
 1. In the application screen, Click on the `Open URL` link to open the application. 
 
 <img src="images/image24.png">
+
+</details>
