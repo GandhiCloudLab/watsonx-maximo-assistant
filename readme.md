@@ -5,6 +5,9 @@ In this documentation lets explore about the following.
 - How to run the application locally
 - How to create Docker image
 - How to deploy the Docker image in the Code Engine (to access the app remotely)
+- Creating Open API using Swagger
+- Create Custom Extension in Watson Assistant
+- Add Custom Extension to Watson Assistant
 
 ## 1. Run Locally
 
@@ -213,5 +216,107 @@ The application page get displayed.
 1. In the application screen, Click on the `Open URL` link to open the application. 
 
 <img src="images/image24.png">
+
+</details>
+
+
+## 4. Creating Open API using Swagger
+
+Lets create open API using swagger. This open api json is needed to create extension in Watson Assistant for WA and this app integration.
+
+
+<details><summary>CLICK ME</summary>
+
+#### Create Open API 
+
+1. Open the URL https://converter.swagger.io/ in your browser
+
+2. In the `GET / Convertor` method, click on the `Try it out` button
+
+3. In the `URL` text box enter the App url suffixed with `swagger.json`
+
+    Ex:     https://maxxxxxxxx.appdomain.cloud/swagger.json
+
+<img src="images/image50.png">
+
+
+4. Click on `Execute` button
+
+The Open API json should have got created. 
+
+<img src="images/image51.png">
+
+5. Click on `Download` button
+
+6. Open the downloaded json and update the App url as highlighted 
+
+<img src="images/image52.png">
+
+</details>
+
+## 5. Create Custom Extension in Watson Assistant
+
+Lets create Custom Extension in Watson Assistant to call the app.
+
+<details><summary>CLICK ME</summary>
+
+
+1. In Watson Assistant, Click on `Extension` button
+
+<img src="images/image53.png">
+
+2. Click on `Build custom extension` button
+<img src="images/image54.png">
+
+3. Click on `Next` button
+<img src="images/image55.png">
+
+4. Enter any Name for the extension.
+<img src="images/image56.png">
+
+5. Click on `Drag and drop file here or click to upload` link
+<img src="images/image57.png">
+
+6. Choose the Open API Json that was generated in the previous section.
+
+7. Click on `Next` button
+<img src="images/image58.png">
+
+8. See the list of APIs imported.
+
+9. Click on `Finish` button
+<img src="images/image59.png">
+
+Extension got created.
+<img src="images/image60.png">
+
+
+
+</details>
+
+## 6. Add Custom Extension to Watson Assistant
+
+Once the Custom Extension is created, it has to be added to WA.
+
+<details><summary>CLICK ME</summary>
+
+1. In the created Extension, Click on `Add` button
+
+<img src="images/image60.png">
+
+2. Click on `Add` button
+<img src="images/image61.png">
+
+3. Click on `Next` button
+<img src="images/image62.png">
+
+4. Click on `Next` button
+<img src="images/image63.png">
+
+5. Click on `Finish` button
+<img src="images/image64.png">
+
+Extension got added.
+<img src="images/image65.png">
 
 </details>
